@@ -34,8 +34,15 @@ constructor(){
 deleteTodo(todo:Todo){
 console.log(todo);
 const index = this.todos.indexOf(todo);
+console.log(index + " deleted");
 this.todos.splice(index,1)
 }
+
+addTodo(todo:Todo){
+  console.log(todo);
+   this.todos.push(todo);
+
+  }
 
 
 }
