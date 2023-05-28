@@ -8,28 +8,34 @@ import { Todo } from 'src/app/todo';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent {
+[x: string]: any;
 
   todos: Todo[];
+Deletetodo: any;
 
 constructor(){
   this.todos = [
 {sno:1,
-  title:"this is title play after 47 minutes",
+  title:"this is title play after 106 minutes",
   desc:"Description",
   active: true},
   {sno:2,
-    title:"this is another title play after 47 minutes",
+    title:"this is another title play after 106 minutes",
     desc:"Description 2",
     active: false},
     {sno:3,
-      title:"this is another title 2 play after 47 minutes",
+      title:"this is another title 2 play after 106 minutes",
       desc:"Description 3",
       active: true}
 ]
 
 }
 
-
+deleteTodo(todo:Todo){
+console.log(todo);
+const index = this.todos.indexOf(todo);
+this.todos.splice(index,1)
+}
 
 
 }
